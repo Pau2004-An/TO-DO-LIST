@@ -136,20 +136,67 @@ body {
 /*RESPONSIVE*/
 @media (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 95%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .perfil h1,
+  .perfil span,
+  #fecha {
+    text-align: center;
   }
 
   .agregar-tarea {
     flex-direction: column;
     gap: 10px;
+    height: auto;
+    padding: 20px 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .agregar-tarea input {
     width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
   }
 
-  .perfil h1, .perfil span, #fecha {
+  .agregar-tarea i {
+    font-size: 40px;
+    align-self: center;
+  }
+
+  .seccion-tarea {
+    text-align: center;
+    width: 100%;
+  }
+
+  .seccion-tarea h3 {
+    text-align: center;
+  }
+
+  .seccion-tarea li {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .seccion-tarea > ul p {
+    font-size: 1rem;
+    word-break: break-word;
+  }
+
+  .footer {
     text-align: center;
   }
 }
