@@ -1,0 +1,155 @@
+*{
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+}
+ 
+ :root {
+        --white: #fafafb;
+        --purple:#1f4e91;
+        --blue-light:#07162b;
+        --blue-dark:#f5b041;
+        --green: #ce9130;
+ }
+
+ body {
+        background: linear-gradient(to bottom,var(--purple), var(--blue-light));
+        height: 100vh;
+        font-family: 'Prompt', sans-serif;
+ } 
+
+.container {
+  width: 400px;
+  height: 600px;
+  margin:0 auto;
+  max-width: 80%;
+}
+
+ /*PERFIL*/
+ .perfil h1 {
+       color: var(--white);
+ }
+
+ .perfil span{
+       color: var(--white);
+       letter-spacing: 1px;
+ }
+
+ #fecha {
+       color: var(--white);
+       padding: 50px 0 5px 0;
+ }
+
+
+  /*AGREGAR TAREA*/
+
+.agregar-tarea {
+background-color: var(--white); 
+border-radius: 15px;
+height: 70px;
+display: flex;
+align-items: center;
+padding: 10px;
+gap: 70px;
+margin: 40px 0;
+
+}
+.agregar-tarea input {
+width: 100%;
+height: 100%;
+border-radius: 8px;
+border: none;
+background-color: var(--white);
+       
+}
+
+.agregar-tarea i {
+font-size: 50px;
+color: var(--green);
+
+}
+
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}   
+
+.agregar-tarea input::placeholder {
+    font-size: 1.1rem;
+    color: var(--purple);
+}
+
+/*SECCION DE TAREAS*/
+
+.seccion-tarea h3 {
+   color: var(--white);
+   margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+     display: flex;
+     background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+     border-radius: 15px;
+     padding: 10px;
+     align-items: center;
+     justify-content: space-between;
+     margin: 5px 0;
+     color: var(--white);
+}
+
+.seccion-tarea i {
+   font-size: 25px; 
+}
+
+.seccion-tarea i:hover {
+   color: var(--blue-light);
+   cursor: pointer;
+}
+
+.seccion-tarea > ul p {
+     font-size: 1.2rem;  
+}
+
+.line-through {
+     text-decoration: line-through;
+     color: var(--blue-light);
+}
+
+.footer {
+  text-align: center;
+  padding: 15px 10px;
+  color: var(--white);
+  font-size: 0.9rem;
+  background-color: rgba(241, 160, 38, 0.61);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px; /* espacio para el footer */
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+
+  .agregar-tarea {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .agregar-tarea input {
+    width: 100%;
+  }
+
+  .perfil h1, .perfil span, #fecha {
+    text-align: center;
+  }
+}
